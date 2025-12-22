@@ -1,0 +1,13 @@
+version: 1.0
+scans:
+  - name: juice-shop-baseline
+    type: baseline
+    target: http://juice-shop:3000
+    report:
+      - format: html
+        filename: /zap/wrk/zap-baseline-report.html
+    rules:
+      # Optional: you can enable/disable specific alert rules here
+      # default rules are fine for now
+
+
