@@ -1,3 +1,4 @@
+cat << 'EOF' > .github/workflows/devsecops-pipeline.yml
 name: DevSecOps CI/CD Pipeline
 
 on:
@@ -8,7 +9,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: mamady554/devsecops-container-lab
 
 jobs:
   security-sca:
@@ -114,3 +115,4 @@ jobs:
               --restart unless-stopped \
               -p 80:8080 \
               ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+EOF
