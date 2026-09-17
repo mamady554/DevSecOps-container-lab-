@@ -1,0 +1,5 @@
+FROM postgres:16-alpine
+ENV POSTGRES_DB=petstore
+ENV POSTGRES_USER=user
+ENV POSTGRES_PASSWORD=password
+EXPOSE 5432
