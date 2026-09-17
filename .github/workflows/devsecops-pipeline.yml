@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: mamadymagassouba/devsecops-container-lab
 
 jobs:
   dependency-scan:
