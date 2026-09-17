@@ -69,8 +69,8 @@ jobs:
 
       - uses: docker/build-push-action@v6
         with:
-          context: .
-          file: app/Dockerfile
+          context: ./app
+          file: ./app/Dockerfile
           load: true
           tags: ${{ steps.meta.outputs.tags }}
           cache-from: type=gha
@@ -86,8 +86,8 @@ jobs:
       - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: app/Dockerfile
+          context: ./app
+          file: ./app/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
